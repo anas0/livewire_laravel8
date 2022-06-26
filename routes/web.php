@@ -4,6 +4,7 @@ use App\Http\Livewire\Home;
 use App\Http\Livewire\Form;
 use App\Http\Livewire\Post;
 use App\Http\Livewire\User;
+use App\Http\Livewire\Action;
 
 use Illuminate\Support\Facades\Route;
 
@@ -30,3 +31,4 @@ Route::get('/form', Form::class);
 
 Route::get('/home/{name?}', Home::class);
 
+Route::get('/action', Action::class);
