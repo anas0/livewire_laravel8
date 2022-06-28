@@ -2,6 +2,11 @@
     @include('livewire.create')
     @include('livewire.update')
     <section>
+        <style>
+            nav svg{
+                max-height:20px;
+            }
+        </style>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -10,11 +15,19 @@
                     @endif
                     <div class="card">
                         <div class="card-header">
-                            <h3>All Students
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addStudentModal">
-                                Add New Student
-                            </button>
-                            </h3>
+                            <div class="row">
+                               <div class="col-md-8">
+                                     <h3>All Students
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addStudentModal">
+                                            Add New Student
+                                        </button>
+                                    </h3>
+                               </div>
+
+                               <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Search...." wire:model="searchTerm" />
+                               </div>
+                            </div>
                         </div>
                         <div class="card-body">
                             <table class="table table-striped">
@@ -43,6 +56,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            {{$students->links()}}
                         </div>
                     </div>
                 </div>
