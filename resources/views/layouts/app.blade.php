@@ -26,6 +26,10 @@
         window.livewire.on('studentUpdated', ()=>{
             $('#updateStudentModal').modal('hide');
         });
+
+        window.livewire.on('fileUploded', ()=>{
+            $('#form-upload')[0].reset();
+        });
     </script>
 </body>
 </html>
