@@ -7,7 +7,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div wire:ignore class="modal-body">
         <form action="">
             <input type="hidden" name="id" wire:model="ids">
             <div class="form-group">
